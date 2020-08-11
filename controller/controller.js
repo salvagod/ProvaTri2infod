@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const usuario = mongoose.model('Fornecedor');
+const usuario = mongoose.model('Usuario');
 
 
 class UsuarioControlador {

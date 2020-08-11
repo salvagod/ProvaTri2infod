@@ -9,7 +9,6 @@ mongoose.connect('mongodb+srv://xinove:etVawwH4ujjh28U@projetos-4gzml.gcp.mongod
      useUnifiedTopology: true,
 
     });
-app.require('./model/model');
 app.use('/api', require('./route/routes'));
 
 
