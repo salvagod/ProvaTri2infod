@@ -1,14 +1,37 @@
 const mongoose = require('mongoose');
 
-const usuario = mongoose.model('Usuario');
+const Usuario = mongoose.model('Usuario');
 
 
+module.exports = {
+    async show(req, res){
+        const produto = await Usuario.findById(req.params.id);
+        
+        return res.json(produto);
+    },
+    async store(req, res){
+        const produto = await Usuario.create(req.body);
+        
+        return res.json(produto);
+    },
+    async update(req, res){
+        const produto = await Usuario.findByIdAndUpdate(req.params.id, req.body, {new:true});
+
+        return res.json(produto);
+    },
+    async deletar(req, res){
+        await Usuario.findByIdAndRemove(req.params.id);
+
+        return res.send();
+    },
+};
+/*
 class UsuarioControlador {
 
     async inserir(req, res){
         try {
-            const inserido = await usuario.create(req.body)
-            if (inserido) return res.json (inserido);
+            const inserido = await Usuario.create(req.body)
+            if (inserido) console.log('ok')
             else console.log('erro no retorno')
         } catch (error) {
             console.log('erro')
@@ -17,8 +40,8 @@ class UsuarioControlador {
 
     async listar(req, res){
         try {
-            const lista = await usuario.find({})
-
+            const lista = await Usuario.find({})
+            
             if (lista) console.log('ok')
             else console.log('erro no retorno')
         } catch (error) {
@@ -27,10 +50,10 @@ class UsuarioControlador {
     }
     async buscar(req, res){
         try {
-            const dado = await usuario.findById(req.params.id)
-
-            if (dado) console.log('ok')
-            else console.log ('erro no retorno')
+            const dado = await Usuario.findById(req.params.id)
+            return res.json(dado);
+            //if (dado) console.log('ok')
+            //else console.log ('erro no retorno')
         } catch (error) {
             console.log('erro')
         }
@@ -38,7 +61,7 @@ class UsuarioControlador {
 
     async atualizar(req, res){
         try {
-            const atualizado = await usuario.findByIdAndUpdate(req.params.id, req.body, {new:true})
+            const atualizado = await Usuario.findByIdAndUpdate(req.params.id, req.body, {new:true})
     
             if (atualizado) console.log('ok atualizado')
             else console.log ('erro no retorno')
@@ -49,7 +72,7 @@ class UsuarioControlador {
     
     async remover(req, res){
         try {
-            const removido = await usuario.findByIdAndRemove(req.params.id)
+            const removido = await Usuario.findByIdAndRemove(req.params.id)
             //return res.send();
             if (removido) console.log('ok deletado')
             else console.log ('erro no retorno')
@@ -59,4 +82,4 @@ class UsuarioControlador {
     }
 }
 
-module.exports = UsuarioControlador
+module.exports = UsuarioControlador;*/
