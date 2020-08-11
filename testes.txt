@@ -1,7 +1,7 @@
-GET http://localhost:8080/api/usuario/5f32d147be208b0250a9d2bf HTTP/1.1
+GET http://localhost:6001/api/usuario/5f330894a1bd9a0aa8e9b1e7 HTTP/1.1
 content-type: application/json
 
-POST http://localhost:8080/api/usuario HTTP/1.1
+POST http://localhost:6001/api/usuario HTTP/1.1
 content-type: application/json
 
 {
@@ -16,13 +16,3 @@ content-type: application/json
 	"estado_civil": "tucano",
 	"sistema_operacional": "manjaro"
 }
-
-PUT http://localhost:8080/api/usuario/5f32d147be208b0250a9d2bf HTTP/1.1
-content-type: application/json
-
-{
-	"nome": "salvadego"
-}
-
-DELETE http://localhost:8080/api/usuario/5f32d147be208b0250a9d2bf HTTP/1.1
-content-type: application/json
