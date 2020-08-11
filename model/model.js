@@ -7,7 +7,7 @@ const UsuarioSchema = new mongoose.Schema({
         required: true
     },
     endereco:{
-        type: Number,
+        type: String,
         requires: true
     },
     idade:{
@@ -26,7 +26,17 @@ const UsuarioSchema = new mongoose.Schema({
     },
     cafeteria_favorita:{
         type: String
+    },
+    estuda_na_tec:{
+        type: Boolean
+    },
+    estado_civil:{
+        type: String
+    },
+    sistema_operacional:{
+        type: String
     }
+
 });
 
 
