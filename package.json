@@ -1,0 +1,11 @@
+{
+  "name": "provatri2infod",
+  "version": "1.0.0",
+  "description": "avaliação1-tri2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vitor Salvadego, Nathan Thomas Valentim Sircus, Eduardo de Abreu Neves, Rafael Furquim",
+  "license": "ISC"
+}
