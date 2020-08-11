@@ -1,0 +1,28 @@
+GET http://localhost:8080/api/usuario/5f32d147be208b0250a9d2bf HTTP/1.1
+content-type: application/json
+
+POST http://localhost:8080/api/inserir HTTP/1.1
+content-type: application/json
+
+{
+	"nome": "tomas",
+	"endereco": "Rua1",
+	"idade": "17",
+	"cpf": "213213",
+	"data_nasc": "12/05/1900",
+	"telefone": "12",
+	"cafeteria_favorita": "supernova",
+	"estuda_na_tec": "true",
+	"estado_civil": "tucano",
+	"sistema_operacional": "manjaro"
+}
+
+PUT http://localhost:8080/api/usuario/5f32d147be208b0250a9d2bf HTTP/1.1
+content-type: application/json
+
+{
+	"nome": "salvadego"
+}
+
+DELETE http://localhost:8080/api/usuario/5f32d147be208b0250a9d2bf HTTP/1.1
+content-type: application/json
